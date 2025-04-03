@@ -636,7 +636,7 @@
 	icon_state = "rock0"
 	name = "electric guitar"
 	desc = "You are pretty fly for a white guy..."
-	force = 35
+	force = 20
 	throwforce = 25
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
@@ -650,6 +650,7 @@
 	wound_bonus = -15
 	bare_wound_bonus = 15
 	armour_penetration = 30
+	block_chance = 25
 	pixel_w = -8
 	actions_types = list(/datum/action/item_action/eguitar)
 	is_wood = TRUE
@@ -679,7 +680,7 @@
 
 /obj/item/melee/vampirearms/eguitar/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=40, force_wielded=10, icon_wielded="rock1")
+	AddComponent(/datum/component/two_handed, force_unwielded=20, force_wielded=38, icon_wielded="rock1")
 
 /obj/item/melee/vampirearms/eguitar/proc/on_wield(obj/item/source, mob/user)
 	SIGNAL_HANDLER
